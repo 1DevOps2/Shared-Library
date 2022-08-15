@@ -10,14 +10,14 @@ def login() {
 }
 
 /* groovylint-disable-next-line FactoryMethodName, MethodReturnTypeRequired, NoDef */
-def build(String tag) {
+def build(String tag = '1devops2/mysite:v1') {
     sh """
         docker build -t "${tag}" .
     """
 }
 
 /* groovylint-disable-next-line MethodReturnTypeRequired, NoDef */
-def push(String tag) {
+def push(String tag = '1devops2/mysite:v1') {
     sh """
         docker push "${tag}"
     """
