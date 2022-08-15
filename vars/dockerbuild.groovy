@@ -10,7 +10,7 @@ def login() {
 }
 
 /* groovylint-disable-next-line FactoryMethodName, MethodReturnTypeRequired, NoDef */
-def build(String tag="1devops2/site:v1") {
+def build(String tag) {
     sh """
         docker build -t "${tag}" .
     """
